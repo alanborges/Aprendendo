@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Exer22 {
 
 	public static void main(String[] args) {
-Scanner scan = new Scanner(System.in);
+		
+		Scanner scan = new Scanner(System.in);
 		
 		double valorPago =0;
 		double media = 0;

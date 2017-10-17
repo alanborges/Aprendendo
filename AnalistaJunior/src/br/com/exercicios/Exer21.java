@@ -13,7 +13,7 @@ public class Exer21 {
 		double soma=0;
 		double turmas=0;
 			
-		System.out.println("Informe a quantidade de Turmas");
+			System.out.println("Informe a quantidade de Turmas");
 			turmas = scan.nextDouble();
 							
 		for(int i=0; i<turmas;i++    ) {
