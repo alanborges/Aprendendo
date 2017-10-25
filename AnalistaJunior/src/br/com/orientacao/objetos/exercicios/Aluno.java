@@ -2,18 +2,14 @@ package br.com.orientacao.objetos.exercicios;
 
 public class Aluno {
 	
-	String nomeCurso;
-	int matricula;
-	String aluno;
-	String [] nomeDisciplinas  = new String[3]; 
-	double [] [] notasDisciplinas = new double [3] [3];
-	double media, soma ;
-	
-	
-	
-	
-	void mostrarInfo(){
-        System.out.println("Nome: " + nomeCurso);
+	String nome;
+    String matricula;
+    String nomeCurso;
+    String[] nomeDisciplinas = new String[3];
+    double[][] notasDisciplinas = new double[3][4];
+    
+    public void mostrarInfo(){
+        System.out.println("Nome: " + nome);
         System.out.println("Matrícula: " + matricula);
         System.out.println("Nome do curso: " + nomeCurso);
         
@@ -24,45 +20,28 @@ public class Aluno {
             }
             System.out.println();
         }
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	boolean verificaAprovadoReprovado () {
-		if(media >= 7) {
-			
-			System.out.println("Parabéns Aprovado! " + media);
-			return true;
-			
-			
-		}else {
-			
-			System.out.println("Reprovado! " + media);
-			return false;
-		}
-		
+    }
+    
+    public boolean verificarAprovado(int indice){
+        
+        if (obterMedia(indice) >= 7){
+            return true;
+        } 
+        
+        return false;
+    }
+    
+    public double obterMedia(int indice){
+        
+        double soma = 0;
+        
+        for (int i=0; i<notasDisciplinas[indice].length; i++){
+            soma += notasDisciplinas[indice][i];
+        }
+        
+        double media = soma / 4;
+        
+        return media;
 		
 		
 	}
